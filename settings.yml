@@ -1,0 +1,5 @@
+svg_icons: 
+  default: "share-nodes|arrow-up-from-bracket"
+  type: "list"
+  list_type: "compact"
+  description: "List of FontAwesome 6 icons used in this theme component"
