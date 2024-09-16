@@ -19,6 +19,7 @@ export default {
       } else {
         api.replaceIcon("d-topic-share", "arrow-up-from-bracket");
         api.replaceIcon("d-post-share", "arrow-up-from-bracket");
+      }
     });
   },
 };
