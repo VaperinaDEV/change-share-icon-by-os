@@ -1,3 +1,7 @@
+disable_icon_change_on_desktop:
+  type: bool
+  default: true
+  description: "Disable share icon change on desktop view on posts. It is recommended to enable if the <code>copyLink</code> is added to <code>post_menu</code>."
 svg_icons: 
   default: "share-nodes|arrow-up-from-bracket"
   type: "list"
