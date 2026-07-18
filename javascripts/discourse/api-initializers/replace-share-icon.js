@@ -7,14 +7,13 @@ export default {
     withPluginApi("0.8.7", (api) => {
       this.capabilities = container.lookup("capabilities:main");
       const isAndroid = this.capabilities.isAndroid;
-      const site = container.lookup("service:site");
-      const isDesktop = site.desktopView;
+      const isMobileDevice = this.capabilities.isMobileDevice;
       const disableIconChangeOnDesktop = settings.disable_icon_change_on_desktop;
 
       if (isAndroid) {
         api.replaceIcon("d-post-share", "share-nodes");
         api.replaceIcon("d-topic-share", "share-nodes");
-      } else if (isDesktop && disableIconChangeOnDesktop) {
+      } else if (!isMobileDevice && disableIconChangeOnDesktop) {
         api.replaceIcon("d-topic-share", "arrow-up-from-bracket");
       } else {
         api.replaceIcon("d-topic-share", "arrow-up-from-bracket");
